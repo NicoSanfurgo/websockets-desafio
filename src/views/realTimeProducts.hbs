@@ -1,0 +1,104 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 p-1">
+            <h2>Agregar producto</h2>
+            <form class="py-2" id="addProduct">
+                <div class="mb-3">
+                    <div class="row">
+                        <label for="title" class="col-3 col-form-label">Title *</label>
+                        <div class="col-9">
+                            <input required type="text" class="form-control col-9" id="title" name="code">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="row">
+                        <label for="description" class="col-3 col-form-label">Description *</label>
+                        <div class="col-9">
+                            <input required type="text" class="form-control" id="description" name="description">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="row">
+                        <label for="code" class="col-3 col-form-label">Code *</label>
+                        <div class="col-9">
+                            <input required type="text" class="form-control" id="code" name="code">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="row">
+                        <label for="price" class="col-3 col-form-label">Price *</label>
+                        <div class="col-9">
+                            <input required type="number" class="form-control" id="price" name="price">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="row">
+                        <label for="stock" class="col-3 col-form-label">Stock *</label>
+                        <div class="col-9">
+                            <input required type="number" class="form-control" id="stock" name="stock">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="row">
+                        <label for="category" class="col-3 col-form-label">Category *</label>
+                        <div class="col-9">
+                            <input required type="text" class="form-control" id="category" name="category">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="row">
+                        <label for="thumbnails" class="col-3 col-form-label">Thumbnails</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="thumbnails" name="thumbnails">
+                        </div>
+                    </div>                    
+                </div>
+                <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+            </form>
+            <hr>
+            <h2>Eliminar producto</h2>
+            <form id="deleteProduct">
+                <div class="form-group my-2">
+                    <div class="row">
+                        <label for="pid" class="col-3 col-form-label">Product ID *</label>
+                        <div class="col-9">
+                            <input required type="number" class="form-control" id="pid" name="pid">
+                        </div>
+                    </div> 
+                </div>
+                <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="col-6 p-2">
+            <h2>Lista de productos</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Category</th>
+                    </tr>
+                </thead>
+                <tbody id="listaProductos">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="./js/main.js"></script>

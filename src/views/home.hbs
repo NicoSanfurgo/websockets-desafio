@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Lista de productos </h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Code</th>
+                <th scope="col">Price</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products}}
+                <tr>
+                    <td> {{this.id}}            </td>
+                    <td> {{this.title}}         </td>
+                    <td> {{this.description}}   </td>
+                    <td> {{this.code}}          </td>
+                    <td> {{this.price}} ARS     </td>
+                    <td> {{this.stock}}         </td>
+                    <td> {{this.category}}      </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
